@@ -20,6 +20,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+/* debug space cadet */
+
+#define LSPO_KEY KC_B
+#define RSPC_KEY KC_0
+
+#define LSPO_MOD KC_LALT
+#define RSPC_MOD KC_RSFT
+
+//#define DISABLE_SPACE_CADET_MODIFIER
+#define DISABLE_SPACE_CADET_ROLLOVER
+
+
+
+
 // prevent stuck modifiers
 #define PREVENT_STUCK_MODIFIERS
 

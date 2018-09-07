@@ -19,15 +19,6 @@ enum custom_keycodes {
   R_RAISE
 };
 
-#define LSPO_KEY KC_9
-#define RSPC_KEY KC_0
-
-//#define LSPO_MOD KC_LSFT
-//#define LSPC_MOD KC_RSFT
-
-//#define DISABLE_SPACE_CADET_MODIFIER
-//#define DISABLE_SPACE_CADET_ROLLOVER
-
 
 
 // Fillers to make layering more clear
