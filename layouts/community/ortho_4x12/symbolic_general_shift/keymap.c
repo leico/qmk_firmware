@@ -36,17 +36,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |   A  |   S  |   D  |   F  |   G  ||   H  |   J  |   K  |   L  |   ;  |Enter |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
  * |      |      |      |      |      |      ||      |      |      |      |      |      |
- * |      |   Z  |   X  |   C  |   V  |   B  ||   N  |   M  |   ,  |   .  |   !  |      |
+ * |Shift |   Z  |   X  |   C  |   V  |   B  ||   N  |   M  |   ,  |   .  |   !  |Shift |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
- * |      |      |      |      |      |LSFT_T||RSFT_T|      |      |      |      |      |
- * |Reset | Alt  | GUI  |LLower|LRaise|Space ||Space |RRaise|RLower| GUI  | Del  |Reset |
+ * |      |      |      |      |      |LRaise||RRaise|      |      |      |      |      |
+ * |Reset | Alt  | GUI  |      |LLower|Space ||Space |RLower|      | GUI  | Del  |Reset |
  * `------------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_ortho_4x12( \
-  KC_ESC,         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,               KC_Y,               KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC, \
-  LCTL_T(KC_TAB), KC_A,     KC_S,     KC_D,     KC_F,     KC_G,               KC_H,               KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_ENT,  \
-  XXXXXXX,        KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,               KC_N,               KC_M,     KC_COMM,  KC_DOT,   KC_EXLM,  XXXXXXX, \
-  RESET,          KC_LALT,  KC_LGUI,  L_LOWER,  L_RAISE,  LSFT_T( KC_SPC ),   RSFT_T( KC_SPC ),   R_RAISE,  R_LOWER,  KC_RGUI,  KC_DEL,   RESET    \
+  KC_ESC,         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC, \
+  LCTL_T(KC_TAB), KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_ENT,  \
+  KC_LSFT,        KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_EXLM,  KC_RSFT, \
+  RESET,          KC_LALT,  KC_LGUI,  XXXXXXX,  L_LOWER,  L_RAISE,  R_RAISE,  R_LOWER,  XXXXXXX,  KC_RGUI,  KC_DEL,   RESET    \
 ),
 
 /* Raise
@@ -58,10 +58,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |   ~  |   |  |   (  |   )  |   *  ||   /  |   <  |   >  |   '  |   :  |Enter |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
  * |      |      |      |      |      |      ||      |      |      |      |      |      |
- * |      |   `  |   ^  |   @  |   $  |   +  ||   -  |   =  |   _  |   "  |   ?  |      |
+ * |Shift |   `  |   ^  |   @  |   $  |   +  ||   -  |   =  |   _  |   "  |   ?  |Shift |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
- * |      |      |      |      |      |LSFT_T||RSFT_T|      |      |      |      |      |
- * |Reset | Alt  | GUI  |LLower|LRaise|Space ||Space |RRaise|RLower| GUI  | Del  |Reset |
+ * |      |      |      |      |      |LRaise||RRaise|      |      |      |      |      |
+ * |Reset | Alt  | GUI  |      |LLower|Space ||Space |RLower|      | GUI  | Del  |Reset |
  * `------------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_ortho_4x12( \
@@ -79,10 +79,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |      |VolDn |VolUp | Mute |      || Left | Down |  Up  |Right |      |Enter |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
  * |      |      |      |      |      |      ||      |      |      |      |      |      |
- * |      |      |      |      |      | PrSc || Home | PgDn | PgUp | End  |      |      |
+ * |Shift |      |      |      |      | PrSc || Home | PgDn | PgUp | End  |      |Shift |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
- * |      |      |      |      |      |LSFT_T||RSFT_T|      |      |      |      |      |
- * |Reset | Alt  | GUI  |LLower|LRaise|Space ||Space |RRaise|RLower| GUI  | Del  |Reset |
+ * |      |      |      |      |      |LRaise||RRaise|      |      |      |      |      |
+ * |Reset | Alt  | GUI  |      |LLower|Space ||Space |RLower|      | GUI  | Del  |Reset |
  * `------------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_ortho_4x12( \
@@ -101,10 +101,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |  F5  |  F6  |  F7  |  F8  |      ||   *  |   /  |   4  |   5  |   6  |Enter |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
  * |      |      |      |      |      |      ||      |      |      |      |      |      |
- * |      |  F9  |  F10 |  F11 |  F12 |      ||   .  |   ,  |   7  |   8  |   9  |      |
+ * |Shift |  F9  |  F10 |  F11 |  F12 |      ||   .  |   ,  |   7  |   8  |   9  |Shift |
  * |------+------+------+------+------+------++------+------+------+------+------+------|
- * |      |      |      |      |      |LSFT_T||RSFT_T|      |      |      |      |      |
- * |Reset | Alt  | GUI  |LLower|LRaise|Space ||Space |RRaise|RLower|   0  | Del  |Reset |
+ * |      |      |      |      |      |LRaise||RRaise|      |      |      |      |      |
+ * |Reset | Alt  | GUI  |      |LLower|Space ||Space |RLower|      | GUI  | Del  |Reset |
  * `------------------------------------------------------------------------------------'
  */
 [_NEUTRAL] = LAYOUT_ortho_4x12( \
@@ -118,38 +118,141 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-void DualKeyPressed ( bool brother_state, uint8_t target ){
 
+/****  Raise Layer value/functions *****/
+
+  //no key event constant
+const static keyevent_t No_event = {
+  .key     = { .col = 255, .row = 255 },
+  .pressed = false,
+  .time    = 0
+};
+
+  // raise key event value
+static keyevent_t Raise_event = No_event;
+
+
+
+
+  // matrix_scan_Raise function
+  //    called matrix_scan_user
+void matrix_scan_Raise ( void ){ 
+
+  if( IS_NOEVENT( Raise_event ) ) return;                   // no keyevent, exit function
+
+  if( layer_state_is( _RAISE ) ) return;                    // already enable Raise Layer, exit function
+
+  if( timer_elapsed( Raise_event.time ) > TAPPING_TERM ){   // Elapsed TAPPING_TERM, enable Raise Layer
+    layer_on( _RAISE );
+    update_tri_layer( _LOWER, _RAISE, _NEUTRAL );
+  }
+
+}
+
+  // RaisePressed function
+  //    called RaiseSwitch
+void RaisePressed ( keyevent_t *event, bool brother_state ){ 
+  
   if( brother_state ) return;
 
-  layer_on( target );
+  Raise_event = *event;         //start hold or tap, register key event
+  
+}
+
+
+  // RaiseReleased function
+  //    called RaiseSwitch
+void RaiseReleased ( bool brother_state ){ 
+  
+  if( brother_state ) return;
+
+  if( layer_state_is( _RAISE ) ){                 // enable Raise layer -> Holded Raise key, and released
+    layer_off( _RAISE );                          // Raise layer disabled
+    update_tri_layer( _LOWER, _RAISE, _NEUTRAL );
+  }
+  else {                                // othewise tap, send space key
+      register_code( KC_SPC );
+    unregister_code( KC_SPC );
+  }
+
+  Raise_event = No_event;               // released keyevent
+
   return;
 }
 
-void DualKeyReleased ( bool brother_state, uint8_t target1 ){ 
+
+   // RaiseSwitch function
+  //    called process_record_user
+bool RaiseSwitch ( keyrecord_t *record, bool *key_state, bool brother ){ 
+
+  if( record -> event.pressed ) {
+    *key_state = true;
+    RaisePressed( &(record -> event), brother );
+  }
+  else {
+    *key_state = false;
+    RaiseReleased( brother );
+  }
+  return false;
+
+}
+
+
+
+
+
+
+/**** Lower layer functions ****/
+
+  // LowerPressed function
+  //    call from LowerSwitch
+void LowerPressed ( bool brother_state ){
+
+  if( brother_state ) return;
+
+  layer_on( _LOWER );
+  update_tri_layer(_LOWER, _RAISE, _NEUTRAL );
+  return;
+}
+
+  // LowerReleased function
+  //    call from LowerSwitch
+void LowerReleased ( bool brother_state ){ 
 
   if( brother_state ) return ;
 
-  layer_off( target1 );
+  layer_off( _LOWER );
+  update_tri_layer(_LOWER, _RAISE, _NEUTRAL );
   return ;
 }
 
-bool LayerSwitch ( keyrecord_t *record, bool *key_state, bool brother, uint8_t layer ){ 
+  // LowerSwitch function
+  //    call from process_record_user
+bool LowerSwitch ( keyrecord_t *record, bool *key_state, bool brother ){ 
   if ( record -> event.pressed ) {
     *key_state = true;
-    DualKeyPressed( brother, layer );
+    LowerPressed( brother );
   } 
   else {
     *key_state = false;
-    DualKeyReleased( brother, layer );
+    LowerReleased( brother );
   }
 
-  update_tri_layer(_LOWER, _RAISE, _NEUTRAL );
   return false;
-
 
 }
 
+
+/**** matrix_scan_user ****/
+void matrix_scan_user ( void ){ 
+
+  matrix_scan_Raise();
+}
+
+
+
+
+/**** process_record_user ****/
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
   static bool l_lower = false;
@@ -161,11 +264,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
 
 
-    case L_LOWER : return LayerSwitch( record, &l_lower, r_lower, _LOWER ); break;
-    case R_LOWER : return LayerSwitch( record, &r_lower, l_lower, _LOWER ); break;
-    case L_RAISE : return LayerSwitch( record, &l_raise, r_raise, _RAISE ); break;
-    case R_RAISE : return LayerSwitch( record, &r_raise, l_raise, _RAISE ); break;
+    case L_LOWER : return LowerSwitch( record, &l_lower, r_lower ); break;
+    case R_LOWER : return LowerSwitch( record, &r_lower, l_lower ); break;
+    case L_RAISE : return RaiseSwitch( record, &l_raise, r_raise ); break;
+    case R_RAISE : return RaiseSwitch( record, &r_raise, l_raise ); break;
+
+    default:
+#     if defined PERMISSIVE_HOLD
+        if( IS_NOEVENT( Raise_event ) ) return true;    // no raise event, process normally
+
+        if( layer_state_is( _RAISE ) ) return true;     // raise already enabled also process normally
+
+        layer_on( _RAISE );                             // Raise layer off, Raise is holded, and pushed other key, 
+        update_tri_layer( _LOWER, _RAISE, _NEUTRAL );   // Raise layer enabled
+
+        process_record( record );                       // call process_record to process keycode ones more
+        return false;
+#     endif
+    break;
 
   }
   return true;
 }
+
+
+
